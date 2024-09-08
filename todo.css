@@ -130,13 +130,15 @@ form button{
         font-size: 55%;
     }
     form{
-        max-width: 400px;
+        max-width: 350px;
         width: 100%;
+        margin: 0 auto;
     }
   
 
     .todo-list{
-        min-width: 400px;
+        min-width: 350px;
         width: 100%;
+        margin: 0 auto;
     }
 }
