@@ -123,3 +123,20 @@ form button{
     transform: translateY(8rem) rotate(20deg);
     opacity: 0;
 }
+
+
+@media (max-width: 768px){
+    html{
+        font-size: 55%;
+    }
+    form{
+        max-width: 400px;
+        width: 100%;
+    }
+  
+
+    .todo-list{
+        min-width: 400px;
+        width: 100%;
+    }
+}
