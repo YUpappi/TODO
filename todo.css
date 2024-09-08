@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: linear-gradient(90deg, green, white,white,green);
+    min-height: 100vh;
+}
+li{
+    list-style-type: none;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+header h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-block: 10px;
+}
+form{
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input[type="text"]{
+    width: 100%;
+    padding: 20px 5px;
+    border: none;
+    outline: none;
+}
+form input:focus{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+form input::placeholder{
+    font-weight: 400;
+    color: green;
+    font-size: 1.6rem;
+}
+
+form button{
+    padding: 20px 15px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: none;
+}
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 10px;
+    min-width: 500px;
+    width: 100%;
+    padding: 10px;
+}
+
+.todo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: all .3s ease-in;
+
+}
+.todo-item{
+    flex: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #000;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-block: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.complete-btn{
+    background-color: lightgreen;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 10px;
+    margin-inline: 5px;
+    margin-block: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.delete-btn{
+    background-color: red;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 10px;
+    margin-inline: 5px;
+    margin-block: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+.fa-check,
+.fa-trash{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+}
+.rotate{
+    transform: translateY(8rem) rotate(20deg);
+    opacity: 0;
+}
