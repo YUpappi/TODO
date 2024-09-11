@@ -39,7 +39,7 @@ form{
 }
 form input[type="text"]{
     width: 100%;
-    padding: 20px 5px;
+    padding: 0 5px;
     border: none;
     outline: none;
 }
@@ -124,10 +124,45 @@ form button{
     opacity: 0;
 }
 
+select {
+    border: none;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color:  green;
+    width: 200px;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  
+  .select {
+    margin: .5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    background:  green;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .3s ease-in;
+  }
+  
+  .select:hover::after {
+    background: lightgreen;
+    color:  green;
+  }
+
 
 @media (max-width: 768px){
     html{
-        font-size: 55%;
+        font-size: 50%;
     }
     form{
         max-width: 350px;

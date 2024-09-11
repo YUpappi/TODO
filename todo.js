@@ -1,6 +1,7 @@
 const taskInput = document.getElementById('taskInput');
 const submitBtn = document.querySelector('.submit-btn ');
 const todoList = document.getElementById('todo-list');
+const filterOption = document.querySelector(".filter-todo");
 
 function addTodo(event) {
     event.preventDefault();
@@ -12,10 +13,12 @@ function addTodo(event) {
     newTodo.classList.add('todo-item');
 
     todoDiv.appendChild(newTodo);
+
     const completeBtn = document.createElement('button');
     completeBtn.innerHTML = '<i class="fa-solid fa-check"></i>'
     completeBtn.classList.add('complete-btn');
     todoDiv.appendChild(completeBtn);
+
     const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>'
     deleteBtn.classList.add('delete-btn');
@@ -44,7 +47,33 @@ function deleteTask(task) {
     }
 }
 
+function filterTodo(e) {
+    const todos = todoList.children;
+    Array.from(todos).forEach(function (todo) {
+      switch (e.target.value) {
+        case "all":
+          todo.style.display = "flex";
+          break;
+        case "completed":
+          if (todo.classList.contains("completed")) {
+            todo.style.display = "flex";
+          } else {
+            todo.style.display = "none";
+          }
+          break;
+        case "uncompleted":
+          if (!todo.classList.contains("completed")) {
+            todo.style.display = "flex";
+          } else {
+            todo.style.display = "none";
+          }
+          break;
+      }
+    });
+  }
+
 
 
 submitBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteTask);
+filterOption.addEventListener("click", filterTodo);
